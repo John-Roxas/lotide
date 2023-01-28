@@ -5,23 +5,22 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const eqArrays = function (arr1, arr2) {
+const eqArrays = function(arr1, arr2) {
   let test = false;
   // an initial condition to test whether the lengths of the arrays are similar. If they are have different lengths, they are assumed to be different and the function returns false.
-  if (arr1.length != arr2.length) {
+  if (arr1.length !== arr2.length) {
     return test;
   }
 
   for (let i = 0; i < arr1.length; i++) {
     if (arr1 [i] === arr2[i]) {
       test = true;
-    }
-    else {
+    } else {
       test = false;
     }
   }
   return test;
-}
+};
 
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
 assertEqual(eqArrays([1, 2, 4], [1, 2, 3]), false); // => should FAIL

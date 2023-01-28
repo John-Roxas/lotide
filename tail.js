@@ -5,7 +5,7 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const tail = function (arr) {
+const tail = function(arr) {
   let result = [];
   // COnditional statement that checks two cases: empty array or length 1 array passed to it. It will return an empty array and end the function.
   if (arr.length <= 1) {
@@ -16,7 +16,7 @@ const tail = function (arr) {
   }
   return result;
 
-}
+};
 
 const words = ["Yo Yo", "Lighthouse", "Labs"];
 tail(words); // no need to capture the return value since we are not checking it
