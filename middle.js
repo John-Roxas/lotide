@@ -35,7 +35,7 @@ const middle = function(inputArray) {
     result.push(inputArray[middlePositionStart]);
   }
   return result;
-}
+};
 
 assertArraysEqual(middle([1,2,3,4]),[2,3]);
 assertArraysEqual(middle([1,2,3]),[2]);
