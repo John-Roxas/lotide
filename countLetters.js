@@ -22,5 +22,3 @@ const countLetters = function(toBeCounted) {
   }
   return count;
 };
-
-
