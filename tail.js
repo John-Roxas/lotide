@@ -1,5 +1,3 @@
-
-
 const tail = function(arr) {
   let result = [];
   // COnditional statement that checks two cases: empty array or length 1 array passed to it. It will return an empty array and end the function.
@@ -12,6 +10,9 @@ const tail = function(arr) {
   return result;
 
 };
+
+// Forgot what this program actually does
+console.log(tail(["Hello", "Lighthouse", "Labs"]));
 
 module.exports = tail;
 

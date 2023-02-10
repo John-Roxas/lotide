@@ -1,7 +1,20 @@
-const assertEqual = require('../assertEqual');
+// const assertEqual = require('../assertEqual');
 const tail = require('../tail');
+const assert = require('chai').assert;
+
+describe("#tail", () => {
+  it("should return ['Lighthouse', 'Labs'] when ['Hello', 'Lighthouse', 'Labs'] is passed into the function", () => {
+    assert.deepEqual(tail(['Hello', 'Lighthouse', 'Labs']), ['Lighthouse', 'Labs']);
+  });
+
+  it("should return an empty array [] when an empty array [] is passed into the function", () => {
+    assert.deepEqual(tail([]), []);
+  });
+
+  it("should return an empty array [] when an array with one element [1] is passed into the function", () => {
+    assert.deepEqual(tail([1]), []);
+  });
+});
 
 // Test code from the original tail.js file!
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words); // no need to capture the return value since we are not checking it
-assertEqual(words.length, 3); // original array should still have 3 elements!
+// const words = ["Hello", "Lighthouse", "Labs"];
