@@ -1,41 +1,30 @@
-const eqArrays = function(arr1, arr2) {
-  let test = false;
-  // an initial condition to test whether the lengths of the arrays are similar. If they are have different lengths, they are assumed to be different and the function returns false.
-  if (arr1.length !== arr2.length) {
-    return test;
+const flatten = function(toBeFlattened, iteratorArray) {
+  // Initializing the output array
+  if (toBeFlattened.length === 0) {
+    return null;
   }
-
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1 [i] === arr2[i]) {
-      test = true;
-    } else {
-      test = false;
-    }
-  }
-  return test;
-};
-
-const assertArraysEqual = function(arr1, arr2) {
-  if (eqArrays(arr1, arr2)) {
-    console.log("These two arrays are equal");
-  } else {
-    console.log("These two arrays are not equal");
-  }
-};
-
-const flatten = function(toBeFlattened) {
   let result = [];
+
+  // A little hamfisted, but this if statement only applies in the recursive case
+  if (iteratorArray) {
+    result = iteratorArray;
+  }
+
+  // Original M1W1 Implementation (Handles arrays that are at most two levels deep)
   for (let i = 0; i < toBeFlattened.length; i++) {
     if (Array.isArray(toBeFlattened[i])) {
-      for (let j = 0; j < toBeFlattened[i].length; j++) {
-        result.push(toBeFlattened[i][j]);
-      }
+      iteratorArray = result;
+      flatten(toBeFlattened[i], iteratorArray);
     } else {
+      // Pushes the element in the initial array to the result array
       result.push(toBeFlattened[i]);
     }
   }
   return result;
 };
 
-/*
-console.log(flatten([1, 2, [3, 4], 5, [6]])) // => [1, 2, 3, 4, 5, 6]; */
+console.log(flatten([1,2,[3,[[[[[[4]]]]]]]]));
+
+module.exports = flatten;
+
+
