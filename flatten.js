@@ -19,7 +19,7 @@ const flatten = function(array) {
 
 module.exports = flatten;
 
-// This is the old function
+// This is the old function before refactoring
 // const flatten = function(toBeFlattened, iteratorArray, result = []) {
 //   // Initializing the output array
 //   if (toBeFlattened.length === 0) {

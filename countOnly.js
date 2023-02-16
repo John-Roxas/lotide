@@ -1,4 +1,3 @@
-
 const countOnly = function(allItems, itemsToCount) {
   let results = {};
   for (const item of allItems) {

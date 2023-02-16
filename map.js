@@ -13,6 +13,5 @@ const results1 = map(words, word => word[0]);
 console.log(results1);
 */
 
-const array1 = ['three','two','one'];
 
 module.exports = map;
