@@ -1,31 +1,14 @@
-const assertEqual = function(actual, expected) {
-  console.assert(actual === expected, actual, "!==", expected);
-  if (actual === expected) {
-    console.log(`Assertation Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`Assertation Failed`);
-  }
-};
-
 
 const findKey = function(inputObject, callbackFn) {
   let result = "";
   let keys = Object.keys(inputObject);
 
-  for (key of keys) {
+  for (let key of keys) {
     if (callbackFn(inputObject[key])) {
       result = key;
       return result;
     }
   }
-  // for (const key in inputObject) {
-//
-  //   if (callbackFn(inputObject[key])) {
-  //     result = key;
-  //     return result;
-  //   }
-  //   // Testing whether this method to loop through nested objects works. console.log (`${key} => ${inputObject[key].stars}`);
-  // }
 };
 
 // assertEqual(findKey({
