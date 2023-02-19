@@ -30,7 +30,7 @@ The following functions are currently implemented:
 * `countOnly(array, target)`: Takes an array and will return the number of times that target appears in the array.
 * `eqArrays(array1, array2)`: Compares array1 to array2 and returns either true or false.
 * `eqObjects(object1, object2)`: Compares object1 to object2 and returns either true or false.
-* `findKey()`: 
+* `findKey(inputObject, callbackFn)`: Takes an object and returns the key that has a value which satisfies the callback function. 
 * `findKeyByValue(object1, object2)`: Compares object1 to object2 and returns either true or false.
 * `flatten(array)`: Takes an array of any length and any level of nesting and returns a single depth array.
 * `head(array)`: Takes an array of any length and returns the first element in the array.
