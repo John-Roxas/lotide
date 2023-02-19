@@ -1,5 +1,5 @@
+// Takes an array and calls the callback function on each value in the array.
 const map = function(array, callback) {
-  //empty for now :)
 
   const results = [];
   for (let item of array) {
@@ -8,10 +8,5 @@ const map = function(array, callback) {
 
   return results;
 };
-/*
-const results1 = map(words, word => word[0]);
-console.log(results1);
-*/
-
 
 module.exports = map;

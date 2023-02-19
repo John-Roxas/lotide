@@ -22,11 +22,7 @@ const eqArrays = function(arr1, arr2, test) {
   }
   return test;
 };
-// Test cases
-// let test1 = [1,[[[3]]],[2,3]];
-// let test2 = [1,[[[3]]],2,3];
-//
-// console.log(eqArrays(test1,test2));
+
 module.exports = eqArrays;
 
 

@@ -11,9 +11,6 @@ const tail = function(arr) {
 
 };
 
-// Forgot what this program actually does
-//console.log(tail(["Hello", "Lighthouse", "Labs"]));
-
 module.exports = tail;
 
 

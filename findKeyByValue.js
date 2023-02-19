@@ -1,9 +1,9 @@
 const findKeyByValue = function(inputObject, filter) {
   let result = "";
+  // Checks all values in each key-value pair in inputObject. If the value matches filter, the key is returned as a result.
   for (let key in inputObject) {
     if (inputObject[key] === filter) {
       result = key;
-      // console.log(key);
     }
   }
   
@@ -11,8 +11,6 @@ const findKeyByValue = function(inputObject, filter) {
   if (result === "") {
     return undefined;
   }
-
-  console.log(result);
   return result;
 };
 

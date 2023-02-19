@@ -1,6 +1,10 @@
 // Refactored to get the function below with a mentor.
 
 const flatten = function(array) {
+  if (array.length === 0) {
+    return null;
+  }
+
   let result = [];
 
   array.forEach(element => {
@@ -15,35 +19,6 @@ const flatten = function(array) {
 
   return result;
 };
-// console.log(flatten([1,2,[3,[[[[[['']]]]]]]]));
+
 
 module.exports = flatten;
-
-// This is the old function before refactoring
-// const flatten = function(toBeFlattened, iteratorArray, result = []) {
-//   // Initializing the output array
-//   if (toBeFlattened.length === 0) {
-//     return null;
-//   }
-//
-//   // this if statement only applies in the recursive case. This avoids us losing the flattened array when we call the function
-//   if (iteratorArray) {
-//     result = iteratorArray;
-//   }
-//
-//   for (let i = 0; i < toBeFlattened.length; i++) {
-//     if (Array.isArray(toBeFlattened[i])) {
-//       iteratorArray = result;
-//       flatten(toBeFlattened[i], iteratorArray);
-//     } else {
-//       // Pushes the element in the initial array to the result array
-//       result.push(toBeFlattened[i]);
-//     }
-//   }
-//   return result;
-// };
-
-
-
-
-

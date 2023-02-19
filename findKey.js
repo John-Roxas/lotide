@@ -1,9 +1,11 @@
 
 const findKey = function(inputObject, callbackFn) {
   let result = "";
+  // initialize the keys variable to be an array of all keys in inputObject.
   let keys = Object.keys(inputObject);
 
   for (let key of keys) {
+    // This if statement returns the value of the key that satisfies the callback function passed into it.
     if (callbackFn(inputObject[key])) {
       result = key;
       return result;
@@ -11,28 +13,4 @@ const findKey = function(inputObject, callbackFn) {
   }
 };
 
-// assertEqual(findKey({
-//   "Blue Hill": { stars: 1 },
-//   "Akaleri":   { stars: 3 },
-//   "noma":      { stars: 2 },
-//   "elBulli":   { stars: 3 },
-//   "Ora":       { stars: 2 },
-//   "Akelarre":  { stars: 3 }
-// }, x => x.stars === 2), "noma");// => "noma"
-
-const callback2 = function(x) {
-  if (x['stars'] === 2) {
-    return true;
-  }
-};
-
-let result = findKey({
-  "Blue Hill": { stars: 1 },
-  "Akaleri":   { stars: 3 },
-  "noma":      { stars: 2 },
-  "elBulli":   { stars: 3 },
-  "Ora":       { stars: 2 },
-  "Akelarre":  { stars: 3 }
-}, callback2);
-
-console.log(result);
+module.exports = findKey;

@@ -4,7 +4,8 @@ const eqObjects = function(object1, object2, result) {
     return false;
   }
   for (let key in object1) {
-    // This if function tests every key/ value pair in object 1 whether it is an object or not. If so, it callts the original function.
+    // This if function tests every key/ value pair in object 1 whether it is an object or not. If so, it calls the original function.
+    // Need to differentiaite between things that appeared to be objects but weren't actually objects
     if (typeof object1[key] === 'object' && object1[key].constructor === Object) {
       result = eqObjects(object1[key],object2[key]);
     } else if (String(object1[key]) === String(object2[key])) {
